@@ -1,7 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import {useDispatch, useSelector} from 'react-redux';
 
 function App() {
+  const dispatch = useDispatch();
+  const blockchain = useSelector(state => state.Blockchain);
+
+  console.table(blockchain);
+
   return (
     <div className="App">
       <header className="App-header">
